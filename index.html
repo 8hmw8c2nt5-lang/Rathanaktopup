@@ -3,154 +3,81 @@
 <html lang="km">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RATHANAK TOPUP</title>
 <style>
 *{box-sizing:border-box}
-body{
- margin:0;background:#090909;color:white;
- font-family:Arial,sans-serif;
-}
-.wrap{max-width:850px;margin:auto;padding:20px}
-.hero{
- text-align:center;padding:35px 15px;
- border:2px solid #d4af37;border-radius:20px;
- background:linear-gradient(145deg,#17100b,#351b2b);
-}
-.hero h1{color:#f3b6d2;font-size:35px}
-.hero p{color:#e5c77a}
-.khmer{color:#d4af37;font-size:23px}
-.tag{
- display:inline-block;background:#d4af37;
- color:#17100b;padding:9px 18px;
- border-radius:30px;font-weight:bold;
-}
-.panel{
- margin-top:22px;padding:22px;
- background:#171313;border:1px solid #b58b37;
- border-radius:18px;
-}
-h2{color:#e7bb71}
-.packages{
- display:grid;grid-template-columns:repeat(2,1fr);
- gap:12px;
-}
-.pkg{
- background:#211a1d;color:white;
- border:1px solid #9e7940;
- border-radius:14px;padding:20px 8px;
- cursor:pointer;
-}
-.pkg b{display:block;color:#f0b5d1;font-size:23px}
-.pkg span{color:#d8c18c;font-size:13px}
-.pkg.selected{
- background:#49303b;border:2px solid #f0b5d1;
-}
-.field{display:block;margin:15px 0;color:#e8c77f}
-.field input{
- width:100%;padding:14px;margin-top:8px;
- border-radius:10px;border:1px solid #b58b37;
- background:#0c0b0b;color:white;font-size:16px;
-}
-.btn{
- width:100%;padding:15px;margin-top:15px;
- border:0;border-radius:12px;
- background:linear-gradient(90deg,#d4af37,#f2b5d0);
- color:#21100f;font-weight:bold;font-size:17px;
-}
-.note{color:#b9aeb1;font-size:13px;line-height:1.7}
-footer{text-align:center;padding:25px;color:#d4af37}
+body{margin:0;background:#090909;color:white;font-family:Arial,sans-serif}
+header{text-align:center;padding:30px 12px;background:#211707;border-bottom:2px solid gold}
+h1{color:#ffd76b;margin:0}
+header p{color:#ff9fc7}
+main{max-width:500px;margin:25px auto;padding:15px}
+h2{text-align:center;color:#ffd76b}
+.packages{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.package{background:#191919;border:1px solid #d6a83e;border-radius:12px;padding:20px 8px;text-align:center;cursor:pointer}
+.package.selected{background:#49300d;border:2px solid gold}
+.package h3{margin:0 0 10px}
+.price{font-size:22px;color:#ff9fc7;font-weight:bold}
+form{margin-top:25px;padding:20px;background:#191919;border:1px solid #a47a2c;border-radius:12px}
+label{display:block;color:#ffd76b;margin:13px 0 7px}
+input{width:100%;padding:13px;background:#292929;border:1px solid #777;border-radius:8px;color:white;font-size:16px}
+button{width:100%;padding:14px;margin-top:20px;background:linear-gradient(90deg,#bd8b2d,#ffe08a);border:0;border-radius:8px;font-size:17px;font-weight:bold}
+#result{text-align:center;color:#ff9fc7}
+footer{text-align:center;padding:25px;color:#aaa}
 </style>
 </head>
 <body>
-<main class="wrap">
-
-<header class="hero">
- <div class="khmer">✿ កម្ពុជា ✿</div>
- <span class="tag">MOBILE LEGENDS TOP UP</span>
- <h1>RATHANAK TOPUP</h1>
- <p>ខ្មែរ • គុណភាព • ទំនុកចិត្ត</p>
- <div class="khmer">❀ ✧ ❀</div>
+<header>
+<h1>👑 RATHANAK TOPUP 👑</h1>
+<p>Mobile Legends Diamond Store</p>
+<p>សូមស្វាគមន៍មកកាន់ហាងរបស់យើង ❤️</p>
 </header>
 
-<section class="panel">
- <h2>✦ ជ្រើសរើស Diamond ✦</h2>
- <div class="packages">
-  <button class="pkg" onclick="choose(this,'86 Diamonds')">
-   <b>86 💎</b><span>តម្លៃកំណត់ពេលក្រោយ</span>
-  </button>
-  <button class="pkg" onclick="choose(this,'172 Diamonds')">
-   <b>172 💎</b><span>តម្លៃកំណត់ពេលក្រោយ</span>
-  </button>
-  <button class="pkg" onclick="choose(this,'257 Diamonds')">
-   <b>257 💎</b><span>តម្លៃកំណត់ពេលក្រោយ</span>
-  </button>
-  <button class="pkg" onclick="choose(this,'344 Diamonds')">
-   <b>344 💎</b><span>តម្លៃកំណត់ពេលក្រោយ</span>
-  </button>
- </div>
-</section>
+<main>
+<h2>💎 ជ្រើសរើស Diamond</h2>
+<div class="packages">
+<div class="package" onclick="choose(this,'86','$1.29')">
+<h3>86 Diamonds</h3><div class="price">$1.29</div>
+</div>
+<div class="package" onclick="choose(this,'172','$2.55')">
+<h3>172 Diamonds</h3><div class="price">$2.55</div>
+</div>
+<div class="package" onclick="choose(this,'257','$3.69')">
+<h3>257 Diamonds</h3><div class="price">$3.69</div>
+</div>
+<div class="package" onclick="choose(this,'343','$4.89')">
+<h3>343 Diamonds</h3><div class="price">$4.89</div>
+</div>
+</div>
 
-<section class="panel">
- <h2>✦ ព័ត៌មានការបញ្ជាទិញ ✦</h2>
-
- <label class="field">User ID
-  <input id="uid" placeholder="បញ្ចូល User ID">
- </label>
-
- <label class="field">Zone ID
-  <input id="zone" placeholder="បញ្ចូល Zone ID">
- </label>
-
- <label class="field">លេខទំនាក់ទំនង
-  <input id="contact" placeholder="លេខទូរស័ព្ទ (ស្រេចចិត្ត)">
- </label>
-
- <p id="chosen" class="note">
- មិនទាន់ជ្រើសរើសកញ្ចប់ទេ
- </p>
-
- <button class="btn" onclick="order()">
- ✦ បញ្ជាទិញឥឡូវនេះ ✦
- </button>
-
- <p class="note">
- សូមពិនិត្យ User ID និង Zone ID ឱ្យបានត្រឹមត្រូវ។
- កុំផ្ញើ Password គណនីហ្គេម។
- </p>
-</section>
-
-<footer>
- <div class="khmer">❀ RATHANAK TOPUP ❀</div>
- <p>© 2026 All Rights Reserved</p>
-</footer>
-
+<form onsubmit="order(event)">
+<h2>📋 ព័ត៌មានបញ្ជាទិញ</h2>
+<label>Diamond</label>
+<input id="diamond" placeholder="ជ្រើសរើស Diamond" readonly required>
+<label>User ID</label>
+<input id="uid" placeholder="បញ្ចូល User ID" required>
+<label>Zone ID</label>
+<input id="zone" placeholder="បញ្ចូល Zone ID" required>
+<label>តម្លៃ</label>
+<input id="price" placeholder="តម្លៃ" readonly>
+<button type="submit">បញ្ជាទិញឥឡូវនេះ</button>
+<p id="result"></p>
+</form>
 </main>
 
+<footer>© 2026 RATHANAK TOPUP ❤️</footer>
+
 <script>
-let selected='';
-
-function choose(el,name){
- document.querySelectorAll('.pkg').forEach(
-  x=>x.classList.remove('selected')
- );
- el.classList.add('selected');
- selected=name;
- document.getElementById('chosen').textContent=
- 'កញ្ចប់ដែលបានជ្រើស៖ '+name;
+function choose(el,diamond,price){
+document.querySelectorAll('.package').forEach(p=>p.classList.remove('selected'));
+el.classList.add('selected');
+document.getElementById('diamond').value=diamond+' Diamonds';
+document.getElementById('price').value=price;
 }
-
-function order(){
- let uid=document.getElementById('uid').value.trim();
- let zone=document.getElementById('zone').value.trim();
-
- if(!selected||!uid||!zone){
-  alert('សូមជ្រើសរើស Diamond និងបំពេញ User ID / Zone ID');
-  return;
- }
-
- alert(
-  'ព័ត៌មានការបញ្ជាទិញ\\n'+
-  selected+'\\n'+
-  'User ID: '+
-
+function order(event){
+event.preventDefault();
+document.getElementById('result').innerText='នេះជាគំរូបញ្ជាទិញប៉ុណ្ណោះ។ មិនទាន់បានផ្ញើការបញ្ជាទិញទេ។';
+}
+</script>
+</body>
+</html>
